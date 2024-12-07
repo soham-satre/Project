@@ -14,38 +14,42 @@
                 <h2>
                     Sellers Details</h2>
                 <div class="mb-3">
-                    <label for="PNameTb" class="form-label" style="color: Navy">
+                    <label for="SNameTb" class="form-label" style="color: Navy">
                         Seller Name</label>
-                    <input type="text" class="form-control" id="SNameTb">
+                    <input type="text" class="form-control" id="SNameTb" runat="server">
                 </div>
+
                 <div class="mb-3">
-                    <label for="Text1" class="form-label" style="color: Navy">
+                    <label for="SEmailTb" class="form-label" style="color: Navy">
                         Seller Email</label>
-                    <input type="email" class="form-control" id="Text1">
+                    <input type="text" class="form-control" id="SEmailTb"  runat="server">
                 </div>
                 <div class="mb-3">
-                    <label for="Text2" class="form-label" style="color: Navy">
+                    <label for="sellerPassTb" class="form-label" style="color: Navy">
                         Seller Password </label>
-                    <input type="text" class="form-control" id="sellerPassTb">
+                    <input type="text" class="form-control" id="sellerPassTb" runat="server">
                 </div>
                 <div class="mb-3">
-                    <label for="Text3" class="form-label" style="color: Navy">
+                    <label for="PhoneTb" class="form-label" style="color: Navy">
                         Seller Phone Number</label>
-                    <input type="text" class="form-control" id="PhoneTb">
+                    <input type="text" class="form-control" id="PhoneTb" runat="server">
                 </div>
                 <div class="mb-3">
-                    <label for="Text3" class="form-label" style="color: Navy">
+                    <label for="SellAddressTb" class="form-label" style="color: Navy">
                         Seller Address</label>
-                    <input type="text" class="form-control" id="SellAddressTb">
+                    <input type="text" class="form-control" id="SellAddressTb" runat="server">
                 </div>
-               <asp:button ID="Button1" text="SAVE" type="submit" class="btn btn-primary btn-block" runat="server"/>
-               <asp:button ID="Button2" text="UPDATE" type="submit" class="btn btn-primary btn-block" runat="server"/>
-               <asp:button ID="Button3" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server"/>
+                <label id="Errmsg" runat="server" class="text-danger"></label>
+               <asp:button ID="SaveBtn" text="SAVE" type="submit" 
+                    class="btn btn-primary btn-block" runat="server" onclick="SaveBtn_Click"/>
+               <asp:button ID="UpdateBtn" text="UPDATE" type="submit" 
+                    class="btn btn-primary btn-block" runat="server"/>
+               <asp:button ID="DeleteBtn" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server"/>
                         
             </div>
         </div>
         <div class="col-md-8">
-            <!-- table here-->
+           <asp:GridView runat="server" class="table"></asp:GridView>
         </div>
     </div>
     </div>
