@@ -61,6 +61,42 @@ namespace GroceryShop.View.Admin
             sellerPassTb.Value = SellerGv.SelectedRow.Cells[4].Text;
             PhoneTb.Value = SellerGv.SelectedRow.Cells[5].Text;
             SellAddressTb.Value = SellerGv.SelectedRow.Cells[6].Text;
+            if (SNameTb.Value == "")
+            {
+                key = 0;
+            }
+            else {
+                key = Convert.ToInt32(SellerGv.SelectedRow.Cells[1].Text);
+            }
+        }
+
+        protected void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sellerPassTb.Value == "" || SNameTb.Value == "" || PhoneTb.Value == "" || SellAddressTb.Value == "" || SEmailTb.Value == "")
+                {
+                    Errmsg.InnerText = "Missing Data";
+                }
+                else
+                {
+                    string SName = SNameTb.Value;
+                    string SEmail = SEmailTb.Value;
+                    string Password = sellerPassTb.Value;
+                    string Phone = PhoneTb.Value;
+                    string Address = SellAddressTb.Value;
+
+                    string Query = "update SellerTb set SellName='{0}',SellEmail='{1}', SellPassword='{2}', SellPhone='{3}', SellAddress='{4}' where SellId={5}";
+                    Query = string.Format(Query, SName, SEmail, Password, Phone, Address, SellerGv.SelectedRow.Cells[1].Text);
+                    Con.SetData(Query);
+                    ShowSellers();
+                    Errmsg.InnerText = "Seller Updated.....!";
+                }
+            }
+            catch (Exception Ex)
+            {
+                Errmsg.InnerText = Ex.Message;
+            }
         }
     }
 }

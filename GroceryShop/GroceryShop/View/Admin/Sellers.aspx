@@ -41,11 +41,12 @@
                     <label for="SellAddressTb" class="form-label" style="color: Navy">Seller Address</label>
                     <input type="text" class="form-control" id="SellAddressTb" runat="server">
                 </div>
-                <label id="Errmsg" runat="server" class="text-danger"></label><br />
+                <label id="Errmsg" runat="server" class="text-danger"></label><br /><br />
                 <asp:button ID="SaveBtn" text="SAVE" type="submit" 
                     class="btn btn-primary btn-block" runat="server" onclick="SaveBtn_Click"/>
                 <asp:button ID="UpdateBtn" text="UPDATE" type="submit" 
-                    class="btn btn-primary btn-block" runat="server"/>
+                    class="btn btn-primary btn-block" runat="server" 
+                    onclick="UpdateBtn_Click"/>
                 <asp:button ID="DeleteBtn" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server"/>
             </div>
             <div class="col-md-8">
