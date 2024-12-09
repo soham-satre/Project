@@ -13,11 +13,18 @@ namespace GroceryShop.View.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             Con = new Models.Functions();
+            ShowSellers();
         }
 
         public override void VerifyRenderingInServerForm(Control control)
         {
-            
+
+        }
+        private void ShowSellers()
+        {
+          string  Query="select * from SellerTb";
+        SellerGv.DataSource=Con.getData(Query);
+            SellerGv.DataBind();
         }
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -38,12 +45,22 @@ namespace GroceryShop.View.Admin
                     string Query = "insert into SellerTb values('{0}','{1}','{2}','{3}','{4}')";
                     Query = string.Format(Query, SName, SEmail, Password, Phone, Address);
                     Con.SetData(Query);
+                    ShowSellers();
                     Errmsg.InnerText = "Seller Added.....!";
                 }
             }
             catch (Exception Ex) {
                 Errmsg.InnerText = Ex.Message;
             }
+        }
+        int key = 0;
+        protected void SellerGv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SNameTb.Value = SellerGv.SelectedRow.Cells[2].Text;
+            SEmailTb.Value = SellerGv.SelectedRow.Cells[3].Text;
+            sellerPassTb.Value = SellerGv.SelectedRow.Cells[4].Text;
+            PhoneTb.Value = SellerGv.SelectedRow.Cells[5].Text;
+            SellAddressTb.Value = SellerGv.SelectedRow.Cells[6].Text;
         }
     }
 }
