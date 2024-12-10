@@ -98,5 +98,33 @@ namespace GroceryShop.View.Admin
                 Errmsg.InnerText = Ex.Message;
             }
         }
+
+        protected void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sellerPassTb.Value == "" )
+                {
+                    Errmsg.InnerText = "Missing Data";
+                }
+                else
+                {
+                    string SName = SNameTb.Value;
+                   
+                    string Query = "delete from SellerTb  where SellId={0}";
+                    Query = string.Format(Query,SellerGv.SelectedRow.Cells[1].Text);
+                    Con.SetData(Query);
+                    ShowSellers();
+                    Errmsg.InnerText = "Seller Deleted.....!";
+                }
+            }
+            catch (Exception Ex)
+            {
+                Errmsg.InnerText = Ex.Message;
+            }
+
+        }
+
+      
     }
 }
