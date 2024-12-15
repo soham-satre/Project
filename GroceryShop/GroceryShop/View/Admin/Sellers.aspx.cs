@@ -125,6 +125,15 @@ namespace GroceryShop.View.Admin
 
         }
 
+        protected void ResetBtn_Click(object sender, EventArgs e)
+        {
+            SNameTb.Value = "";
+            SEmailTb.Value = "";
+                PhoneTb.Value="";
+            SellAddressTb.Value="";
+            sellerPassTb.Value = "";
+        }
+
       
     }
 }

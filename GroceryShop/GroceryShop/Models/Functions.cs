@@ -39,5 +39,10 @@ namespace GroceryShop.Models
             Con.Close();
             return Cnt;
         }
+
+        internal DataTable getData(string Query, Dictionary<string, object> parameters)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -55,6 +55,7 @@
                 <asp:Button ID="SaveBtn" Text="SAVE" CssClass="btn btn-primary btn-block" runat="server" OnClick="SaveBtn_Click"/>
                 <asp:Button ID="UpdateBtn" Text="UPDATE" CssClass="btn btn-primary btn-block" runat="server" OnClick="UpdateBtn_Click"/>
                 <asp:Button ID="DeleteBtn" Text="DELETE" CssClass="btn btn-primary btn-block" runat="server" OnClick="DeleteBtn_Click"/>
+                <asp:Button ID="ResetBtn" Text="RESET" CssClass="btn btn-primary btn-block" runat="server" onclick="ResetBtn_Click"/>
             </div>
             <div class="col-md-8">
                 <asp:GridView runat="server" CssClass="table table-hover" ID="SellerGv" 
