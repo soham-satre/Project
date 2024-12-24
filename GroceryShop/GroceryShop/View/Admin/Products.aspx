@@ -17,28 +17,29 @@
                 <div class="mb-3">
                     <label for="PNameTb" class="form-label" style="color: Navy">
                         Product Name</label>
-                    <input type="text" class="form-control" id="PNameTb">
+                    <input type="text" class="form-control" id="PNameTb" runat="server">
                 </div>
                 <div class="mb-3">
-                    <label for="Text1" class="form-label" style="color: Navy">
+                    <label for="PCatTb" class="form-label" style="color: Navy">
                         Product Category</label>
-                    <input type="text" class="form-control" id="Text1">
+                    <input type="text" class="form-control" id="PCatTb" runat="server">
                 </div>
                 <div class="mb-3">
-                    <label for="Text2" class="form-label" style="color: Navy">
+                    <label for="ProPriTb" class="form-label" style="color: Navy">
                         Product Price</label>
-                    <input type="text" class="form-control" id="Text2">
+                    <input type="text" class="form-control" id="ProPriTb">
                 </div>
                 <div class="mb-3">
-                    <label for="Text3" class="form-label" style="color: Navy">
+                    <label for="ProQtyTb" class="form-label" style="color: Navy">
                         Product Quantity</label>
-                    <input type="text" class="form-control" id="Text3">
+                    <input type="text" class="form-control" id="ProQtyTb" runat="server">
                 </div>
                 <div class="mb-3">
                     <label for="Text3" class="form-label" style="color: Navy">
                         Expiration Date</label>
-                    <input type="date" class="form-control" id="ExpDate">
+                    <input type="date" class="form-control" id="ExpDate" runat="server">
                 </div>
+                 <label id="Errmsg" runat="server" class="text-danger"></label><br /><br />
                <asp:button text="Save" type="submit" class="btn btn-primary btn-block" runat="server"/>
                <asp:button ID="Update" text="UPDATE" type="submit" class="btn btn-primary btn-block" runat="server"/>
                <asp:button ID="Delete" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server"/>
@@ -46,7 +47,8 @@
             </div>
         </div>
         <div class="col-md-8">
-            <!-- table here-->
+              <asp:GridView runat="server" CssClass="table table-hover" ID="ProductGv" 
+                    AutoGenerateSelectButton="True" ></asp:GridView>
         </div>
     </div>
     </div>

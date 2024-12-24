@@ -16,23 +16,31 @@
                 <div class="mb-3">
                     <label for="PNameTb" class="form-label" style="color: Navy">
                         Category Name</label>
-                    <input type="text" class="form-control" id="CatNameTb">
+                    <input type="text" class="form-control" id="CatNameTb" runat="server">
                 </div>
                 <div class="mb-3">
                     <label for="Text1" class="form-label" style="color: Navy">
                          Category Remarks</label>
-                    <input type="text" class="form-control" id="CarRemarkTb">
+                    <input type="text" class="form-control" id="CarRemarkTb" runat="server">
                 </div>
                 <div class="mb-3">
               <br /> <br /> <br />
-               <asp:button ID="Button1" text="SAVE" type="submit" class="btn btn-primary btn-block" runat="server"/>
-               <asp:button ID="Button2" text="UPDATE" type="submit" class="btn btn-primary btn-block" runat="server"/>
-               <asp:button ID="Button3" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server"/>
+               <label id="Errmsg" runat="server" class="text-danger"></label><br /><br />
+               <asp:button ID="Savebtn" text="SAVE" type="submit" class="btn btn-primary btn-block" 
+                        runat="server" onclick="Savebtn_Click"/>
+               <asp:button ID="updatebtn" text="UPDATE" type="submit" 
+                        class="btn btn-primary btn-block" runat="server" 
+                        onclick="updatebtn_Click"/>
+               <asp:button ID="Deletebtn" text="DELETE" type="submit" 
+                        class="btn btn-primary btn-block" runat="server" 
+                        onclick="Deletebtn_Click"/>
                         
             </div>
         </div>
         <div class="col-md-8">
-            <!-- table here-->
+            <asp:GridView runat="server" CssClass="table table-hover" ID="CategoryGv" 
+                    AutoGenerateSelectButton="True" onselectedindexchanged="CategoryGv_SelectedIndexChanged" 
+                    ></asp:GridView>
         </div>
     </div>
     </div>
