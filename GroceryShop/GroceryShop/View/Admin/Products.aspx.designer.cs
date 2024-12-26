@@ -28,7 +28,16 @@ namespace GroceryShop.View.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PCatTb;
+        protected global::System.Web.UI.WebControls.DropDownList PCatTb;
+        
+        /// <summary>
+        /// ProPriTb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProPriTb;
         
         /// <summary>
         /// ProQtyTb control.
@@ -40,6 +49,15 @@ namespace GroceryShop.View.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputText ProQtyTb;
         
         /// <summary>
+        /// ExpDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ExpDate;
+        
+        /// <summary>
         /// Errmsg control.
         /// </summary>
         /// <remarks>
@@ -49,22 +67,31 @@ namespace GroceryShop.View.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Errmsg;
         
         /// <summary>
-        /// Update control.
+        /// SaveBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Update;
+        protected global::System.Web.UI.WebControls.Button SaveBtn;
         
         /// <summary>
-        /// Delete control.
+        /// UpdateBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Delete;
+        protected global::System.Web.UI.WebControls.Button UpdateBtn;
+        
+        /// <summary>
+        /// DeleteBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteBtn;
         
         /// <summary>
         /// ProductGv control.

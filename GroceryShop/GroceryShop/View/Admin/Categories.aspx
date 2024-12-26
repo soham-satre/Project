@@ -21,19 +21,14 @@
                 <div class="mb-3">
                     <label for="Text1" class="form-label" style="color: Navy">
                          Category Remarks</label>
-                    <input type="text" class="form-control" id="CarRemarkTb" runat="server">
+                    <input type="text" class="form-control" id="CatRemarkTb" runat="server">
                 </div>
                 <div class="mb-3">
-              <br /> <br /> <br />
-               <label id="Errmsg" runat="server" class="text-danger"></label><br /><br />
-               <asp:button ID="Savebtn" text="SAVE" type="submit" class="btn btn-primary btn-block" 
-                        runat="server" onclick="Savebtn_Click"/>
-               <asp:button ID="updatebtn" text="UPDATE" type="submit" 
-                        class="btn btn-primary btn-block" runat="server" 
-                        onclick="updatebtn_Click"/>
-               <asp:button ID="Deletebtn" text="DELETE" type="submit" 
-                        class="btn btn-primary btn-block" runat="server" 
-                        onclick="Deletebtn_Click"/>
+              <br />
+               <label id="Errmsg" runat="server" class="text-danger"></label><br /><br /><br /><br />
+          <asp:button ID="Savebtn" text="SAVE" type="submit" class="btn btn-primary btn-block" runat="server" onclick="Savebtn_Click"/>
+               <asp:button ID="updatebtn" text="UPDATE" type="submit" class="btn btn-primary btn-block" runat="server" onclick="updatebtn_Click"/>
+               <asp:button ID="Deletebtn" text="DELETE" type="submit" class="btn btn-primary btn-block" runat="server" onclick="Deletebtn_Click"/>
                         
             </div>
         </div>

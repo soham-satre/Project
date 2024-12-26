@@ -22,13 +22,13 @@ namespace GroceryShop.View.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputText CatNameTb;
         
         /// <summary>
-        /// CarRemarkTb control.
+        /// CatRemarkTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText CarRemarkTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText CatRemarkTb;
         
         /// <summary>
         /// Errmsg control.

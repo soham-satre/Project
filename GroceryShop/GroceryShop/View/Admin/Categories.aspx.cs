@@ -30,17 +30,16 @@ namespace GroceryShop.View.Admin
         {
             try
             {
-                if (CatNameTb.Value == "" || CarRemarkTb.Value == "")
+                if (CatNameTb.Value == "" || CatRemarkTb.Value == "")
                 {
                     Errmsg.InnerText = "Missing Data";
                 }
                 else
                 {
                     string CatName = CatNameTb.Value;
-                    string CatRem = CarRemarkTb.Value;
+                    string CatRem = CatRemarkTb.Value;
 
-
-                    string Query = "insert into Categorytb1 values('{0}','{1}')";
+                    string Query = "insert into Categorytb1 (CatName, CatDescription) values('{0}','{1}')";
                     Query = string.Format(Query, CatName, CatRem);
                     Con.SetData(Query);
                     ShowCategories();
@@ -57,17 +56,16 @@ namespace GroceryShop.View.Admin
         {
             try
             {
-                if (CatNameTb.Value == "" || CarRemarkTb.Value == "")
+                if (CatNameTb.Value == "" || CatRemarkTb.Value == "")
                 {
                     Errmsg.InnerText = "Missing Data";
                 }
                 else
                 {
                     string CatName = CatNameTb.Value;
-                    string CatRem = CarRemarkTb.Value;
+                    string CatRem = CatRemarkTb.Value;
 
-
-                    string Query = "update Categorytb1 set CatName='{0}',CatDescription='{1}' where CatId='{2}'";
+                    string Query = "update Categorytb1 set CatName='{0}', CatDescription='{1}' where CatId='{2}'";
                     Query = string.Format(Query, CatName, CatRem, CategoryGv.SelectedRow.Cells[1].Text);
                     Con.SetData(Query);
                     ShowCategories();
@@ -90,8 +88,6 @@ namespace GroceryShop.View.Admin
                 }
                 else
                 {
-                    string CName = CatNameTb.Value;
-
                     string Query = "delete from Categorytb1 where CatId={0}";
                     Query = string.Format(Query, CategoryGv.SelectedRow.Cells[1].Text);
                     Con.SetData(Query);
@@ -108,7 +104,7 @@ namespace GroceryShop.View.Admin
         protected void CategoryGv_SelectedIndexChanged(object sender, EventArgs e)
         {
             CatNameTb.Value = CategoryGv.SelectedRow.Cells[2].Text;
-            CarRemarkTb.Value = CategoryGv.SelectedRow.Cells[3].Text;
+            CatRemarkTb.Value = CategoryGv.SelectedRow.Cells[3].Text;
 
             if (CatNameTb.Value == "")
             {
