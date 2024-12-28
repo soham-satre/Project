@@ -7,17 +7,21 @@
             margin-bottom: 25px; /* Adjust the value as needed */ 
         } 
     </style>
-    <script type="text/javascript">
-        function PrintPanel() {
-            var PGrid = document.getElementById('<%=BillingGV.ClientID %>>');
-            PGrid.border = 0;
-            var Pwin = window.open('', 'PrintGrid', 'left=100, top=100,width=1024,height=768,tollbar=0,scrollbars=1,status=0,resizable=1');
-            Pwin.document.write(PGrid.outerHTML);
-            Pwin.document.close();
-            Pwin.focus();
-            Pwin / print();
-            Pwin.close();
-        }
+<script type="text/javascript">
+    function PrintPanel() {
+        var PGrid = document.getElementById('<%=BillingGV.ClientID %>');
+        PGrid.border = 0;
+        var Pwin = window.open('', 'PrintGrid', 'left=100, top=100,width=1024,height=768,toolbar=0,scrollbars=1,status=0,resizable=1');
+        Pwin.document.write('<html><head><title>Print Grid</title></head><body>');
+        Pwin.document.write(PGrid.outerHTML);
+        Pwin.document.write('</body></html>');
+        Pwin.document.close();
+        Pwin.focus();
+        Pwin.print();
+        Pwin.close();
+    }
+</script>
+
     </script>
 </asp:Content>
 
