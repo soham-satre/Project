@@ -24,7 +24,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="PCatTb" class="form-label" style="color: Navy">Product Category</label>
-                    <asp:DropDownList ID="PCatTb" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="PCatTb" CssClass="form-control" runat="server" ></asp:DropDownList>
                 </div>
                 <div class="mb-3">
                     <label for="ProPriTb" class="form-label" style="color: Navy">Product Price</label>
